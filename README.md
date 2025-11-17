@@ -1,19 +1,22 @@
-# Project Title
+# TonyPiRobot
 
-A brief description of what your project does and who it's for.
+A PyQt5-based desktop application for robot control and management with a modern GUI interface.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/yourusername/project-name.svg?style=social&label=Star)](https://github.com/yourusername/project-name)
+[![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
+[![PyQt5](https://img.shields.io/badge/PyQt5-5.15-green.svg)](https://www.riverbankcomputing.com/software/pyqt/)
 
 ## 📋 Table of Contents
 
-- [Project Title](#project-title)
+- [TonyPiRobot](#tonypirobot)
   - [📋 Table of Contents](#-table-of-contents)
   - [About The Project](#about-the-project)
     - [Built With](#built-with)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
+      - [Option 1: Using Pre-built Executable (Windows)](#option-1-using-pre-built-executable-windows)
+      - [Option 2: Running from Source](#option-2-running-from-source)
   - [Usage](#usage)
     - [Key Features](#key-features)
   - [Screenshots](#screenshots)
@@ -25,102 +28,87 @@ A brief description of what your project does and who it's for.
 
 ## About The Project
 
-Provide a more detailed description of your project, its purpose, and the problem it solves. Include what makes your project unique and why someone would want to use it.
+TonyPiRobot is a desktop application built with PyQt5 that provides a comprehensive interface for controlling and managing robot systems. The application features a modern GUI with web engine capabilities, network communication, and positioning services.
 
 ### Built With
 
-List the major frameworks, libraries, and technologies used in your project:
-
-- [React](https://reactjs.org/)
-- [Next.js](https://nextjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Python](https://www.python.org/) 3.7
+- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - GUI framework
+- [Qt5 WebEngine](https://doc.qt.io/qt-5/qtwebengine-index.html) - Embedded web browser
+- [Qt5 Network](https://doc.qt.io/qt-5/qtnetwork-index.html) - Network communication
+- [Qt5 Positioning](https://doc.qt.io/qt-5/qtpositioning-index.html) - Location services
 
 ## Getting Started
 
-Instructions on setting up your project locally.
-
 ### Prerequisites
 
-List any software or tools needed before installing your project:
-
-- Node.js (v18 or higher)
-- npm or yarn or pnpm
-- Git
+- Windows 10/11 (64-bit)
+- Python 3.7 (if running from source)
+- Git (for cloning the repository)
 
 ### Installation
 
-Step-by-step instructions on how to install and set up your project:
+#### Option 1: Using Pre-built Executable (Windows)
+
+1. Download the latest release from the releases page
+2. Extract the `main` folder
+3. Run `main.exe` from the extracted folder
+
+#### Option 2: Running from Source
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/yourusername/project-name.git
+   git clone https://github.com/yourusername/TonyPiRobot.git
    ```
 
 2. Navigate to the project directory
    ```bash
-   cd project-name
+   cd TonyPiRobot
    ```
 
 3. Install dependencies
    ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   pnpm install
+   pip install PyQt5
+   pip install netifaces
    ```
 
-4. Set up environment variables
+4. Run the application
    ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your configuration
+   python main.py
+   # or if you have the source file
+   python -m main
    ```
-
-5. Run the development server
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   pnpm dev
-   ```
-
-6. Open [http://localhost:3000](http://localhost:3000) in your browser
 
 ## Usage
 
-Examples and instructions on how to use your project:
-
-```javascript
-// Example code snippet
-import { Component } from './component';
-
-const app = new Component();
-app.doSomething();
-```
+Launch the application by running `main.exe` (Windows) or executing the Python script. The application provides a graphical interface for robot control and management.
 
 ### Key Features
 
-- Feature 1: Description of feature
-- Feature 2: Description of feature
-- Feature 3: Description of feature
+- **Modern GUI Interface**: Built with PyQt5 for a responsive and intuitive user experience
+- **Web Engine Integration**: Embedded web browser capabilities for displaying web-based content
+- **Network Communication**: Built-in network support for robot communication and data transfer
+- **Positioning Services**: Location and positioning features for robot navigation
+- **Cross-platform Ready**: Windows executable included, can be built for other platforms
 
 ## Screenshots
 
-Add screenshots or GIFs of your project:
+_Add screenshots or GIFs of your project here once available._
 
 ![Project Screenshot](screenshot.png)
 
 ## Roadmap
 
-Outline planned features and future improvements:
+Planned features and future improvements:
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
+- [ ] Linux and macOS builds
+- [ ] Enhanced robot control protocols
+- [ ] Real-time sensor data visualization
+- [ ] Remote control capabilities
+- [ ] Configuration management system
+- [ ] Logging and debugging tools
 
-See the [open issues](https://github.com/yourusername/project-name/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/yourusername/TonyPiRobot/issues) for a full list of proposed features (and known issues).
 
 ## Contributing
 
@@ -138,14 +126,13 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Your Name - [@yourusername](https://twitter.com/yourusername)
-
-Project Link: [https://github.com/yourusername/project-name](https://github.com/yourusername/project-name)
+Project Link: [https://github.com/yourusername/TonyPiRobot](https://github.com/yourusername/TonyPiRobot)
 
 ## Acknowledgments
 
-- Credit individuals, organizations, or resources that contributed to your project
-- [Shields.io](https://shields.io/) for badges
-- [Choose an Open Source License](https://choosealicense.com/)
+- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - Python bindings for Qt5
+- [Qt Framework](https://www.qt.io/) - Cross-platform application framework
+- [Shields.io](https://shields.io/) - Badge generation
+- [Choose an Open Source License](https://choosealicense.com/) - License guidance
 
 

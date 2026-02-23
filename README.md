@@ -1,112 +1,116 @@
 # TonyPiRobot
 
-A PyQt5-based desktop application for robot control and management with a modern GUI interface.
+A PyQt5-based desktop application for robot control and management with AI-powered object detection using YOLO-light integration.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/python-3.7-blue.svg)](https://www.python.org/)
+[![Python](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/)
 [![PyQt5](https://img.shields.io/badge/PyQt5-5.15-green.svg)](https://www.riverbankcomputing.com/software/pyqt/)
+[![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4B+-green.svg)](https://www.raspberrypi.org/)
 
-## 📋 Table of Contents
+## Why This Project
 
-- [TonyPiRobot](#tonypirobot)
-  - [📋 Table of Contents](#-table-of-contents)
-  - [About The Project](#about-the-project)
-    - [Built With](#built-with)
-  - [Getting Started](#getting-started)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-      - [Option 1: Using Pre-built Executable (Windows)](#option-1-using-pre-built-executable-windows)
-      - [Option 2: Running from Source](#option-2-running-from-source)
-  - [Usage](#usage)
-    - [Key Features](#key-features)
-  - [Screenshots](#screenshots)
-  - [Roadmap](#roadmap)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
-  - [Acknowledgments](#acknowledgments)
+TonyPiRobot was created to provide an intuitive and powerful interface for robot control and management. The integration of YOLO-light brings real-time object detection capabilities, enabling robots to understand and interact with their environment more intelligently.
 
-## About The Project
+## Standout Features
 
-TonyPiRobot is a desktop application built with PyQt5 that provides a comprehensive interface for controlling and managing robot systems. The application features a modern GUI with web engine capabilities, network communication, and positioning services.
+- **Modern GUI Interface**: Built with PyQt5 for a responsive and intuitive user experience
+- **YOLO-light Integration**: Real-time object detection for enhanced robot perception
+- **Web Engine Integration**: Embedded web browser capabilities for displaying web-based content
+- **Network Communication**: Built-in network support for robot communication and data transfer
+- **Positioning Services**: Location and positioning features for robot navigation
+- **Cross-platform Ready**: Windows executable included, can be built for other platforms
+- **Real-time Computer Vision**: Object detection and tracking for autonomous navigation
 
-### Built With
+## Tech Stack
 
-- [Python](https://www.python.org/) 3.7
-- [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - GUI framework
-- [Qt5 WebEngine](https://doc.qt.io/qt-5/qtwebengine-index.html) - Embedded web browser
-- [Qt5 Network](https://doc.qt.io/qt-5/qtnetwork-index.html) - Network communication
-- [Qt5 Positioning](https://doc.qt.io/qt-5/qtpositioning-index.html) - Location services
+- **Python** 3.7+
+- **PyQt5** - GUI framework
+- **Qt5 WebEngine** - Embedded web browser
+- **Qt5 Network** - Network communication
+- **Qt5 Positioning** - Location services
+- **YOLO-light** - Lightweight object detection
+- **OpenCV** - Computer vision and image processing
+- **netifaces** - Network interface management
 
-## Getting Started
+## Architecture (Essential)
 
-### Prerequisites
+```
+src/
+├── main.py                 # Main application entry point
+├── gui/
+│   ├── main_window.py     # Primary GUI interface
+│   ├── control_panel.py   # Robot control widgets
+│   └── detection_view.py  # YOLO detection visualization
+├── vision/
+│   ├── yolo_detector.py   # YOLO-light integration
+│   └── camera_handler.py  # Camera interface
+├── network/
+│   ├── robot_client.py    # Robot communication
+│   └── discovery.py       # Network discovery
+└── positioning/
+    └── gps_handler.py     # Location services
+```
 
-- Windows 10/11 (64-bit)
-- Python 3.7 (if running from source)
-- Git (for cloning the repository)
+## Quick Run
 
-### Installation
-
-#### Option 1: Using Pre-built Executable (Windows)
+### Option 1: Using Pre-built Executable (Windows)
 
 1. Download the latest release from the releases page
 2. Extract the `main` folder
 3. Run `main.exe` from the extracted folder
 
-#### Option 2: Running from Source
+### Option 2: Running from Source
 
-1. Clone the repository
-   ```bash
-   git clone https://github.com/yourusername/TonyPiRobot.git
-   ```
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/TonyPiRobot.git
+cd TonyPiRobot
 
-2. Navigate to the project directory
-   ```bash
-   cd TonyPiRobot
-   ```
+# Install dependencies
+pip install PyQt5
+pip install netifaces
+pip install opencv-python
+pip install numpy
+pip install torch
+pip install torchvision
 
-3. Install dependencies
-   ```bash
-   pip install PyQt5
-   pip install netifaces
-   ```
-
-4. Run the application
-   ```bash
-   python main.py
-   # or if you have the source file
-   python -m main
-   ```
+# Run the application
+python main.py
+```
 
 ## Usage
 
-Launch the application by running `main.exe` (Windows) or executing the Python script. The application provides a graphical interface for robot control and management.
+Launch the application to access the robot control interface with integrated YOLO-light object detection. The application provides:
 
-### Key Features
+- **Robot Control Panel**: Direct control of robot movements and actions
+- **Detection View**: Real-time object detection visualization
+- **Network Dashboard**: Monitor and manage robot connections
+- **Position Tracking**: GPS and location-based navigation
 
-- **Modern GUI Interface**: Built with PyQt5 for a responsive and intuitive user experience
-- **Web Engine Integration**: Embedded web browser capabilities for displaying web-based content
-- **Network Communication**: Built-in network support for robot communication and data transfer
-- **Positioning Services**: Location and positioning features for robot navigation
-- **Cross-platform Ready**: Windows executable included, can be built for other platforms
+## Demo Videos
 
-## Screenshots
+### Robot Detection in Action
 
-_Add screenshots or GIFs of your project here once available._
+![Robot Detection](optics/robottt.gif)
 
-![Project Screenshot](screenshot.png)
+[Full Video Demo](optics/robottt.mp4)
+
+### Compact Demo
+
+![Compact Demo](optics/robottt_small.gif)
 
 ## Roadmap
 
 Planned features and future improvements:
 
 - [ ] Linux and macOS builds
-- [ ] Enhanced robot control protocols
+- [ ] Enhanced YOLO models for better accuracy
 - [ ] Real-time sensor data visualization
-- [ ] Remote control capabilities
+- [ ] Remote control capabilities via web interface
 - [ ] Configuration management system
 - [ ] Logging and debugging tools
+- [ ] Multi-robot swarm control
+- [ ] Advanced path planning algorithms
 
 See the [open issues](https://github.com/yourusername/TonyPiRobot/issues) for a full list of proposed features (and known issues).
 
@@ -127,11 +131,14 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Project Link: [https://github.com/yourusername/TonyPiRobot](https://github.com/yourusername/TonyPiRobot)
+Personal Contact: [https://www.freyazou.com/contact/](https://www.freyazou.com/contact/)
 
 ## Acknowledgments
 
 - [PyQt5](https://www.riverbankcomputing.com/software/pyqt/) - Python bindings for Qt5
 - [Qt Framework](https://www.qt.io/) - Cross-platform application framework
+- [YOLO](https://github.com/ultralytics/ultralytics) - Object detection framework
+- [OpenCV](https://opencv.org/) - Computer vision library
 - [Shields.io](https://shields.io/) - Badge generation
 - [Choose an Open Source License](https://choosealicense.com/) - License guidance
 

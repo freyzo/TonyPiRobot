@@ -7,6 +7,18 @@ A PyQt5-based desktop application for robot control and management with AI-power
 [![PyQt5](https://img.shields.io/badge/PyQt5-5.15-green.svg)](https://www.riverbankcomputing.com/software/pyqt/)
 [![Raspberry Pi](https://img.shields.io/badge/Raspberry%20Pi-4B+-green.svg)](https://www.raspberrypi.org/)
 
+## Demo Videos
+
+### Robot Detection in Action
+
+![Robot Detection](optics/robottt.gif)
+
+[Full Video Demo](optics/robottt.mp4)
+
+### Compact Demo
+
+![Compact Demo](optics/robottt_small.gif)
+
 ## Why This Project
 
 TonyPiRobot was created to provide an intuitive and powerful interface for robot control and management. The integration of YOLO-light brings real-time object detection capabilities, enabling robots to understand and interact with their environment more intelligently.
@@ -86,18 +98,6 @@ Launch the application to access the robot control interface with integrated YOL
 - **Detection View**: Real-time object detection visualization
 - **Network Dashboard**: Monitor and manage robot connections
 - **Position Tracking**: GPS and location-based navigation
-
-## Demo Videos
-
-### Robot Detection in Action
-
-![Robot Detection](optics/robottt.gif)
-
-[Full Video Demo](optics/robottt.mp4)
-
-### Compact Demo
-
-![Compact Demo](optics/robottt_small.gif)
 
 ## Roadmap
 
